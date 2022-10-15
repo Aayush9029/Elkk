@@ -7,24 +7,47 @@
 
 import Cocoa
 
-@main
 class AppDelegate: NSObject, NSApplicationDelegate {
+    private var emulator: KeyEmulate = .init()
 
-    
-
+    private var playing: Bool = false
+    private var skipItem: NSStatusItem!
+    private var playPauseItem: NSStatusItem!
+    private var backItem: NSStatusItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        skipItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        playPauseItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        backItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+
+        if let button = backItem.button {
+            button.image = NSImage(systemSymbolName: "backward.end.fill", accessibilityDescription: "play button")
+            button.action = #selector(songBackward)
+        }
+
+        if let button = playPauseItem.button {
+            button.image = NSImage(systemSymbolName: "play.fill", accessibilityDescription: "play button")
+            button.action = #selector(togglePlayPause)
+        }
+        if let button = skipItem.button {
+            button.image = NSImage(systemSymbolName: "forward.end.fill", accessibilityDescription: "play pause button")
+            button.action = #selector(songForward)
+        }
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    @objc func songBackward() {
+        emulator.emulate("previous")
     }
 
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
-        return true
+    @objc func songForward() {
+        emulator.emulate("next")
     }
 
-
+    @objc func togglePlayPause() {
+        emulator.emulate("playpause")
+        playing.toggle()
+        if let button = playPauseItem.button {
+            button.image = NSImage(systemSymbolName: !playing ? "play.fill" : "pause.fill", accessibilityDescription: "play pause button")
+        }
+    }
 }
-
