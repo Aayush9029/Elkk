@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C27751E828FB4E190061595C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27751E728FB4E190061595C /* AppDelegate.swift */; };
-		C27751EA28FB4E190061595C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27751E928FB4E190061595C /* ViewController.swift */; };
 		C27751EC28FB4E1A0061595C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27751EB28FB4E1A0061595C /* Assets.xcassets */; };
 		C27751F728FB4F270061595C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27751F628FB4F270061595C /* main.swift */; };
 		C27751F928FB53A40061595C /* KeyEmulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27751F828FB53A40061595C /* KeyEmulate.swift */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		C27751E428FB4E190061595C /* Elkk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elkk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27751E728FB4E190061595C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C27751E928FB4E190061595C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C27751EB28FB4E1A0061595C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C27751F028FB4E1A0061595C /* Elkk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Elkk.entitlements; sourceTree = "<group>"; };
 		C27751F628FB4F270061595C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 				C27751E728FB4E190061595C /* AppDelegate.swift */,
 				C27751F828FB53A40061595C /* KeyEmulate.swift */,
 				C27751F628FB4F270061595C /* main.swift */,
-				C27751E928FB4E190061595C /* ViewController.swift */,
 				C27751EB28FB4E1A0061595C /* Assets.xcassets */,
 				C27751F028FB4E1A0061595C /* Elkk.entitlements */,
 			);
@@ -133,7 +130,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C27751EA28FB4E190061595C /* ViewController.swift in Sources */,
 				C27751F928FB53A40061595C /* KeyEmulate.swift in Sources */,
 				C27751E828FB4E190061595C /* AppDelegate.swift in Sources */,
 				C27751F728FB4F270061595C /* main.swift in Sources */,
@@ -264,10 +260,12 @@
 				CODE_SIGN_ENTITLEMENTS = Elkk/Elkk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Elkk;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Aayush Pokharel";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -275,7 +273,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.opensource.Elkk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -291,10 +289,12 @@
 				CODE_SIGN_ENTITLEMENTS = Elkk/Elkk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Elkk;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Aayush Pokharel";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -302,7 +302,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.opensource.Elkk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
