@@ -21,16 +21,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         backItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = backItem.button {
-            button.image = NSImage(systemSymbolName: "backward.end.fill", accessibilityDescription: "play button")
+            button.image = NSImage(systemSymbolName: "backward.end.fill", accessibilityDescription: "play previous music")
             button.action = #selector(songBackward)
         }
 
         if let button = playPauseItem.button {
-            button.image = NSImage(systemSymbolName: "play.fill", accessibilityDescription: "play button")
+            button.image = NSImage(systemSymbolName: "play.fill", accessibilityDescription: "toggle playback button")
             button.action = #selector(togglePlayPause)
         }
         if let button = skipItem.button {
-            button.image = NSImage(systemSymbolName: "forward.end.fill", accessibilityDescription: "play pause button")
+            button.image = NSImage(systemSymbolName: "forward.end.fill", accessibilityDescription: "play next music")
             button.action = #selector(songForward)
         }
     }
@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         emulator.emulate("playpause")
         playing.toggle()
         if let button = playPauseItem.button {
-            button.image = NSImage(systemSymbolName: !playing ? "play.fill" : "pause.fill", accessibilityDescription: "play pause button")
+            button.image = NSImage(systemSymbolName: !playing ? "play.fill" : "pause.fill", accessibilityDescription: "toggle playback button")
         }
     }
 }
